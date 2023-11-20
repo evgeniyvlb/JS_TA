@@ -1,87 +1,98 @@
 // #1
-// let x = 1;
-// let y = 2;
 
-// let res1 = x.toString() + y.toString();  
-// console.log(res1);
-// console.log(typeof res1)
+// let myArray = [2,3,4,5]
 
-// let res2 = (typeof x === 'number') + y.toString();
-// console.log(res2);
+// for (let count = 0; count < myArray.length; count++){
+//     console.log(myArray[count]);
+// };
 
-// let res3 = Boolean(x+y)
-// console.log(` ${typeof  res3} `);
-
-// let res4 = x + y
-// console.log(`${typeof  res4}`);
+// let count =0;
+// while (count < myArray.length){
+//     console.log(myArray[count]);
+//     count++
+// };
 
 // #2
-// function checkNum() {
-//    num = prompt("enter a number");
-//    if(num > 0){ 
-//     console.log("NUmber is positive");
-//     } else { 
-//     console.log("NUmber is negative");
-//     }
-// }
-// checkNum();
+
+// for (let count = 0; count <= 15; count++){
+//     if (count % 2) {
+//         console.log(`${count} is odd`);
+//     } else {
+//      console.log(`${count} is even`)
+//     };
+// };
 
 // #3
-//  myArr = [];
-//  myArr.push('1');
-//  myArr.push('line');
-//  myArr.push(true);
-//  myArr.push(null);
-//  console.log(myArr.length);
 
-//  myArr[5] = prompt("enter a number");
-//  console.log(myArr[5]);
+// function randArray (k) {
+//     let arr = [];
 
-//  console.log(myArr);
-//  myArr.shift();
-//  console.log(myArr);
+//     for (let count = 0; count < k; count++){
+//         arr.push(Math.floor(Math.random() * (500 - 1) + 1))
+//      };
+//      return (console.log(arr));
+// };
 
+// randArray (7);
 
 // #4
-// let cities = [" Rome ", " Lviv ", " Warsaw "]
-// console.log(cities.join('*'));
 
-// #5
-// isAdult = prompt("enter a number");
-// if(isAdult >= 18){ 
-//     console.log("You have reached the age of majority");
-//     } else { 
-//     console.log("You are still to young");
-//     };
+// let a = parseInt(prompt("Type a number a!"), 10);
+// let b = parseInt(prompt("Type a number b!"), 10);
+
+// function raiseToDegree (a, b) { 
+//     console.log(a ** b);
+// };
+
+// if (Number.isInteger(a) && Number.isInteger(b)){
+//     raiseToDegree (a, b);
+//   } else {
+//     console.log('incorrect type');
+//   };
+
+//// #5
+
+// function findMin(...arg) {
+//     arr = []
+//     arr.push(arg);
+//     console.log(arr[0].sort()[0]);
+// };
+
+// findMin(12, 14, 4, -4, 0.2);
 
 // #6
-// a = parseInt(prompt("enter a"));
-// b = parseInt(prompt("enter b"));
-// c = parseInt(prompt("enter c"));
-// if (a < 0 || b < 0 || c < 0){
-//     console.log('Incorrect data')
+
+// function findUnique(arr) {
+//     uniq = [...new Set(arr)]
+//     if (arr.length == uniq.length) {
+//         console.log( true ) 
+//     } else {
+//         console.log( false ) 
+//     };
 // };
 
-// p = (a + b + c)/2
-// let areaTriangle = Math.sqrt(p * (p -a) * (p -b) * (p -c));
-// console.log(areaTriangle.toFixed(3))
-
-// let rectTriangle = Math.pow(c, 2) ==  Math.pow(a, 2) + Math.pow(b, 2) ;
-// console.log(`is tiangle: ${rectTriangle}`);
+// findUnique([1,2,3,5,3]);
+//findUnique([1,2,3,5,11]);
 
 // #7
-// let currentdate = new Date().getHours();
-// switch (currentdate) {
-    // case (currentdate >= 23 && currentdate < 5):
-    //     console.log('Good night');
-    // break;
-    // case (currentdate >= 5 && currentdate < 11):
-    //     console.log('Good morning');
-    // break;
-    // case (currentdate >= 11 && currentdate < 17):
-    //     console.log('Good day');
-    // break;
-    // case (currentdate >= 17 && currentdate < 23):
-    //     console.log('Good day');
-    //break;
+
+// function lastElement (arr, element) {
+//     element == undefined ? console.log(arr.slice(-1)) : console.log(arr.slice(-element));
 // };
+
+// lastElement([3,4,10,-5]);
+// lastElement([3,4,10,-5], 2);
+// lastElement([3,4,10,-5], 8);
+
+// #8
+
+// function stringToUpper(...arg){
+//     let str = arg[0]
+//     let words = str.split(' ');
+//     words = words.map(function(elem) {
+//         return elem.charAt(0).toUpperCase() + elem.slice(1);
+//     });
+//     console.log(words.join(' '))
+// };
+
+// stringToUpper('i love java script');
