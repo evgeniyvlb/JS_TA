@@ -1,129 +1,84 @@
 // #1
 
-// function propsCount(currentObject){
-//     console.log(Object.keys(currentObject).length)
-// };
-
-// let mentor = {
-//     course: "JS fundamental",
-//     duration: 3,
-//     direction: "web development"
-//     };
-// propsCount( mentor )
+//let elem = document.getElementById("test")
+// let elem = document.querySelector('div')
+// elem.innerText = "Last";
 
 // #2
-
-// function showProps (obj) {
-//     let properties = [];
-//     let keys =[];
-//     for(let property in obj) {
-//         keys.push(obj[property]);
-//         properties.push(property);
-//     } ;
-//     return console.log(properties, keys)
-// };
-
-// let obj = {
-//     course: "JS fundamental",
-//     duration: 3,
-//     direction: "web development",
-//     year: 2023,
-//     month: "November"
-// }
-// showProps (obj)
+// let elem = document.getElementsByClassName("image")[0]
+// elem.setAttribute("src", "cat.jpg")
+// alert(elem.outerHTML)
 
 // #3
 
-// class Person {
-//     constructor(name, surname){
-//         this.name = name;
-//         this.surname = surname;
-//     }
-//     showFullName (){
-//         console.log(this.name + ' ' + this.surname )
-//     }
-// }
+// let paragraphs = document.querySelectorAll('div p')
 
-// class Student extends Person {
-//     constructor(name, surname, year){
-//         super(name, surname);
-//         this.year = year;
-//     }
-//     showFullName (middleName){
-//        return this.name + ' ' + this.surname + ' ' + middleName
-//     }
-
-//     showCourse (){
-//         const currentYear = new Date().getFullYear();
-//         return currentYear - this.year;
-//     }
+// var i = 0;
+// for(var elem of paragraphs){
+//     console.log(`Selector text ${i}: ${elem.innerText}`)
+//     i++
 // }
-// const stud1 = new Student("Petro", "Petrenko", 2015);
-// console.log(stud1.showFullName("Petrovych"));
-//console.log("Current course: " + stud1.showCourse());
 
 // #4
+// let items = document.querySelectorAll('ul li')
+// let firstItem = items[0].innerHTML
+// let secondItem = items[1].innerHTML
+// let thirdItem = items[2].innerHTML
+// let fourthItem = items[3].innerHTML
+// let fifthItem = items[4].innerHTML
 
-// class Worker {
-//     #experience = 1.2;
+//let firstItem = document.getElementsByTagName('li')[0].innerHTML
+// let secondItem = document.getElementsByTagName('li')[0].nextSibling.innerHTML
+// let thirdItem = document.querySelector('ul li:nth-child(3)').innerHTML
+// let fourthItem = document.getElementsByTagName('li')[4].previousSibling.innerHTML
+// let fifthItem = document.getElementsByTagName('li')[4].innerHTML
 
-//     constructor(fullName, dayRate, workingDays) {
-//         this.fullName = fullName;
-//         this.dayRate = dayRate;
-//         this.workingDays = workingDays;
-//     }
+// alert(`${firstItem},${fifthItem},${secondItem},${fourthItem},${thirdItem}`)
 
-//     showSalaryWithExperience() {
-//         return this.#experience*this.showSalary();
-//     }
+// #5
+// let header = document.querySelector('h1')
+// header.setAttribute("style", "background: green;");
 
-//     showSalary() {
-//         return this.dayRate*this.workingDays;
-//     }
-//     get experience() { return this.#experience; }
+// let firstP = document.querySelector('div p:nth-child(1)')
+// firstP.setAttribute("style", "fontWeight: bold;");
 
-//     set experience(value) { this.#experience = value; }
-// }
+// let secondP = document.querySelector('div p:nth-child(2)')
+// secondP.setAttribute("style", "color: red;");
 
-// let worker1 = new Worker("Tyler Wheatly", 50, 10);
-// console.log(worker1.fullName);
-// console.log(worker1.fullName + ' salary: ' + worker1.showSalary());
-// console.log("New experience: " + worker1.experience);
-// console.log(worker1.fullName + ' salary: ' + worker1.showSalaryWithExperience());
-// worker1.experience = 1.5;
-// console.log("New experience: " + worker1.experience);
-// console.log(worker1.fullName + ' salary: ' + worker1.showSalaryWithExperience());
+// let thirdP = document.querySelector('div p:nth-child(3)')
+// thirdP.setAttribute("style", "text-decoration: underline;");
 
-// let worker2 = new Worker("Addison Chasey", 100, 15);
-// console.log(worker2.fullName);
-// console.log(worker2.fullName + ' salary: ' + worker2.showSalary());
-// console.log("New experience: " + worker1.experience);
-// console.log(worker2.fullName + ' salary: ' + worker2.showSalaryWithExperience());
-// worker2.experience = 1.5;
-// console.log("New experience: " + worker1.experience);
-// console.log(worker2.fullName + ' salary: ' + worker2.showSalaryWithExperience());
+// let fourthP = document.querySelector('div p:nth-child(4)')
+// fourthP.setAttribute("style", "font-style: italic;");
 
-// let worker3 = new Worker("Lillian Morrison", 150, 20);
-// console.log(worker3.fullName);
-// console.log(worker3.fullName + ' salary: ' + worker3.showSalary());
-// console.log("New experience: " + worker1.experience);
-// console.log(worker3.fullName + ' salary: ' + worker3.showSalaryWithExperience());
-// worker3.experience = 1.5;
-// console.log("New experience: " + worker1.experience);
-// console.log(worker3.fullName + ' salary: ' + worker3.showSalaryWithExperience());
+// let spanEl = document.querySelector('span').innerHTML
+// console.log(spanEl.replace(",", "").replace(/\s/g, ''));
 
-// function salarySorting(workersArr){
-//     return workersArr.sort((a, b) => a.showSalaryWithExperience() - b.showSalaryWithExperience());
-// };
+// #6
 
-// let workers = [worker1, worker2, worker3];
+// let newMessages1 = prompt("Enter new text 1")
+// let firstInput = document.getElementById('input1')
+// firstInput.setAttribute("value", newMessages1);
 
-// const sortWorkers = salarySorting(workers);
+// let newMessages2 = prompt("Enter new text 2")
+// let secondInput = document.getElementById('input2')
+// secondInput.setAttribute("value", newMessages2);
 
-// for (worker in sortWorkers){
-//     console.log(`${sortWorkers[worker].fullName}: ${sortWorkers[worker].showSalaryWithExperience()}`);
-// };
+// #7
 
-// function dynamicSorting(workers, property){
-//     return workers.sort((a, b) => a[property] - b[property]);
-// };
+// let mainEl = document.createElement("main")
+// mainEl.className = " mainClass check item "
+
+// let divEl = document.createElement("div")
+// divEl.id = "myDiv"
+
+// let parEl = document.createElement("p")
+// parEl.innerHTML = "First paragraph"
+
+// document.body.prepend(mainEl);
+
+// let newMain = document.getElementsByTagName('main')[0]
+// newMain.prepend(divEl);
+
+// let newDiv = document.getElementsByTagName('div')[0]
+// newDiv.prepend(parEl);
