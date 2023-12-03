@@ -1,84 +1,112 @@
 // #1
 
-//let elem = document.getElementById("test")
-// let elem = document.querySelector('div')
-// elem.innerText = "Last";
+// const newWindow = window.open('', '', "width= 300, height=300")
+
+// setTimeout(function(){
+//     newWindow.resizeTo(500, 500)
+// }, 2000);
+
+// setTimeout(function(){
+//     newWindow.moveTo(200, 200)
+// }, 4000);
+
+// setTimeout(function(){
+//     newWindow.close()
+// }, 6000);
 
 // #2
-// let elem = document.getElementsByClassName("image")[0]
-// elem.setAttribute("src", "cat.jpg")
-// alert(elem.outerHTML)
+
+// let btn = document.querySelector('div button');
+// btn.addEventListener("click", changeCSS);
+
+// function setAttributes(element, attributes) {
+//     Object.keys(attributes).forEach(attr => {
+//       element.setAttribute(attr, attributes[attr]);
+//     });
+//   }
+
+// function changeCSS() {
+
+//     let paragraph = document.getElementById('text')
+//     const attributes = {
+//         style: 'color: orange; font-size: 20px; font-family: Comic Sans MS'
+//       };
+//     setAttributes(paragraph, attributes);
+// }
 
 // #3
 
-// let paragraphs = document.querySelectorAll('div p')
+// let blueBtn = document.getElementById('blue_btn')
+// let pinkBtn = document.getElementById('pink_btn')
+// let brownBtn = document.getElementById('brown_btn')
+// let linkEl = document.querySelector('a');
 
-// var i = 0;
-// for(var elem of paragraphs){
-//     console.log(`Selector text ${i}: ${elem.innerText}`)
-//     i++
+// blueBtn.addEventListener("click", changeBlueBtn);
+// pinkBtn.addEventListener("click", changePinkBtn);
+// brownBtn.addEventListener("click", changeBrownBtn);
+// linkEl.addEventListener("mouseover", changeLink);
+
+// let bodyEl = document.querySelector('body');
+
+// function changeBlueBtn () {
+//     bodyEl.setAttribute("style", "background: blue;");
 // }
 
+// function changePinkBtn () {
+//     bodyEl.setAttribute("style", "background: pink;");
+// }
+
+// function changeBrownBtn () {
+//     bodyEl.setAttribute("style", "background: brown;");
+// }
+
+// function changeLink () {
+//     bodyEl.setAttribute("style", "background: white;");
+// };
+
 // #4
-// let items = document.querySelectorAll('ul li')
-// let firstItem = items[0].innerHTML
-// let secondItem = items[1].innerHTML
-// let thirdItem = items[2].innerHTML
-// let fourthItem = items[3].innerHTML
-// let fifthItem = items[4].innerHTML
 
-//let firstItem = document.getElementsByTagName('li')[0].innerHTML
-// let secondItem = document.getElementsByTagName('li')[0].nextSibling.innerHTML
-// let thirdItem = document.querySelector('ul li:nth-child(3)').innerHTML
-// let fourthItem = document.getElementsByTagName('li')[4].previousSibling.innerHTML
-// let fifthItem = document.getElementsByTagName('li')[4].innerHTML
-
-// alert(`${firstItem},${fifthItem},${secondItem},${fourthItem},${thirdItem}`)
+// function remove() {
+//     var x = document.getElementById("selectNow");
+//     x.remove(x.selectedIndex);
+//  }
 
 // #5
-// let header = document.querySelector('h1')
-// header.setAttribute("style", "background: green;");
 
-// let firstP = document.querySelector('div p:nth-child(1)')
-// firstP.setAttribute("style", "fontWeight: bold;");
+// let button = document.getElementById('live_button')
 
-// let secondP = document.querySelector('div p:nth-child(2)')
-// secondP.setAttribute("style", "color: red;");
+// button.addEventListener("click", clickBtn);
+// button.addEventListener("mouseover", clickBtn);
+// button.addEventListener("mouseout", clickBtn);
 
-// let thirdP = document.querySelector('div p:nth-child(3)')
-// thirdP.setAttribute("style", "text-decoration: underline;");
-
-// let fourthP = document.querySelector('div p:nth-child(4)')
-// fourthP.setAttribute("style", "font-style: italic;");
-
-// let spanEl = document.querySelector('span').innerHTML
-// console.log(spanEl.replace(",", "").replace(/\s/g, ''));
+// function clickBtn(){
+//     let brEl = document.createElement('br')
+//     if (event.type == 'click'){
+//         let textEl = document.createTextNode("I was pressed!")
+//         document.body.append(textEl);
+//         document.body.append(brEl);
+//     } else if (event.type == 'mouseover'){
+//         let textEl = document.createTextNode("Mouse on me!")
+//         document.body.append(textEl);
+//         document.body.append(brEl);
+//     } else if (event.type == 'mouseout'){
+//         let textEl = document.createTextNode("Mouse is not on me!")
+//         document.body.append(textEl);
+//         document.body.append(brEl);
+//     }
+// }
 
 // #6
+// let height = window.innerHeight
+// let width = window.innerWidth
 
-// let newMessages1 = prompt("Enter new text 1")
-// let firstInput = document.getElementById('input1')
-// firstInput.setAttribute("value", newMessages1);
-
-// let newMessages2 = prompt("Enter new text 2")
-// let secondInput = document.getElementById('input2')
-// secondInput.setAttribute("value", newMessages2);
-
-// #7
-
-// let mainEl = document.createElement("main")
-// mainEl.className = " mainClass check item "
-
-// let divEl = document.createElement("div")
-// divEl.id = "myDiv"
-
-// let parEl = document.createElement("p")
-// parEl.innerHTML = "First paragraph"
-
-// document.body.prepend(mainEl);
-
-// let newMain = document.getElementsByTagName('main')[0]
-// newMain.prepend(divEl);
-
-// let newDiv = document.getElementsByTagName('div')[0]
-// newDiv.prepend(parEl);
+// setInterval(function(){
+//     if (height != window.innerHeight){
+//         height = window.innerHeight
+//         console.log(`Height: ${height}`)
+//     } 
+//     if (width != window.innerWidth){
+//         width = window.innerWidth
+//         console.log(`Width: ${width}`)
+//     } 
+// }, 1000)
