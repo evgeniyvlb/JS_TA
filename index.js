@@ -1,112 +1,77 @@
 // #1
 
-// const newWindow = window.open('', '', "width= 300, height=300")
-
-// setTimeout(function(){
-//     newWindow.resizeTo(500, 500)
-// }, 2000);
-
-// setTimeout(function(){
-//     newWindow.moveTo(200, 200)
-// }, 4000);
-
-// setTimeout(function(){
-//     newWindow.close()
-// }, 6000);
+// let arr = ["Tom", "Sam", "Ray", "Bob"];
+// let [ x, y, w, ...z ] = arr ;
+// console.log(x); // "Tom"
+// console.log(y); // "Sam"
+// console.log(z); // [Bob]
 
 // #2
 
-// let btn = document.querySelector('div button');
-// btn.addEventListener("click", changeCSS);
-
-// function setAttributes(element, attributes) {
-//     Object.keys(attributes).forEach(attr => {
-//       element.setAttribute(attr, attributes[attr]);
-//     });
-//   }
-
-// function changeCSS() {
-
-//     let paragraph = document.getElementById('text')
-//     const attributes = {
-//         style: 'color: orange; font-size: 20px; font-family: Comic Sans MS'
-//       };
-//     setAttributes(paragraph, attributes);
-// }
-
+// let data = {
+//     names: ["Sam", "Tom", "Ray", "Bob"],
+//     ages: [20, 24, 22, 26],
+//     };
+//     let {names: [, name2, ,name4 ], ages: [, age2, , age4]}= data;
+//     console.log(name2); // "Tom"
+//     console.log(age2); // 24
+//     console.log(name4); // "Bob"
+//     console.log(age4); // 26
+    
 // #3
 
-// let blueBtn = document.getElementById('blue_btn')
-// let pinkBtn = document.getElementById('pink_btn')
-// let brownBtn = document.getElementById('brown_btn')
-// let linkEl = document.querySelector('a');
-
-// blueBtn.addEventListener("click", changeBlueBtn);
-// pinkBtn.addEventListener("click", changePinkBtn);
-// brownBtn.addEventListener("click", changeBrownBtn);
-// linkEl.addEventListener("mouseover", changeLink);
-
-// let bodyEl = document.querySelector('body');
-
-// function changeBlueBtn () {
-//     bodyEl.setAttribute("style", "background: blue;");
-// }
-
-// function changePinkBtn () {
-//     bodyEl.setAttribute("style", "background: pink;");
-// }
-
-// function changeBrownBtn () {
-//     bodyEl.setAttribute("style", "background: brown;");
-// }
-
-// function changeLink () {
-//     bodyEl.setAttribute("style", "background: white;");
-// };
-
+// function mul(...arg) {
+//     let numNumbers = 0
+//     for (let i of arg){
+//         if (Number.isInteger(i)) {
+//             numNumbers += i 
+//         }
+//     }
+//     return numNumbers
+//  }
+//  console.log( mul (1, "str", 2, 3, true )); // 6
+//  console.log( mul ( null , "str", false , true )); // 0
+ 
 // #4
 
-// function remove() {
-//     var x = document.getElementById("selectNow");
-//     x.remove(x.selectedIndex);
-//  }
+// let server = {
+//     data: 0,
+//        convertToString : function (callback) {
+//     callback( () => this .data + "")
+//     }
+//     };
+
+//     let client = {
+//     server: server,
+//     result: "",
+//     calc: function (data) {
+//           this .server.data = data;
+//           this .server.convertToString ( this .notification ());
+//     },
+    
+//     notification: function () {
+//           return ( (callback) => this .result = callback())
+//     }
+// };
+
+//     client.calc (123);
+//     console.log( client.result ); // "123"
+//     console.log( typeof client.result ); // "string"
 
 // #5
 
-// let button = document.getElementById('live_button')
-
-// button.addEventListener("click", clickBtn);
-// button.addEventListener("mouseover", clickBtn);
-// button.addEventListener("mouseout", clickBtn);
-
-// function clickBtn(){
-//     let brEl = document.createElement('br')
-//     if (event.type == 'click'){
-//         let textEl = document.createTextNode("I was pressed!")
-//         document.body.append(textEl);
-//         document.body.append(brEl);
-//     } else if (event.type == 'mouseover'){
-//         let textEl = document.createTextNode("Mouse on me!")
-//         document.body.append(textEl);
-//         document.body.append(brEl);
-//     } else if (event.type == 'mouseout'){
-//         let textEl = document.createTextNode("Mouse is not on me!")
-//         document.body.append(textEl);
-//         document.body.append(brEl);
+// function mapBuilder (keysArray, valuesArrays){
+//     const map1 = new Map();
+//     for (let count = 0; count < keysArray.length; count++){
+//         map1.set(keysArray[count], valuesArrays[count] )
 //     }
+//     return map1
 // }
 
-// #6
-// let height = window.innerHeight
-// let width = window.innerWidth
+// let keys = [1, 2, 3, 4];
+// let values = ["div", "span", "b", " i "];
+// let map = mapBuilder (keys, values);
+// console.log( map.size); // 4
+// console.log( map.get (2)); // "span"
 
-// setInterval(function(){
-//     if (height != window.innerHeight){
-//         height = window.innerHeight
-//         console.log(`Height: ${height}`)
-//     } 
-//     if (width != window.innerWidth){
-//         width = window.innerWidth
-//         console.log(`Width: ${width}`)
-//     } 
-// }, 1000)
+
