@@ -1,48 +1,34 @@
 // #1
+// const http = require('http');
+// const os = require('node:os');
+// const path = require('path');
 
-// function getPromise(message, time) {
-//     const promise = new Promise(function (resolve){
-//         setTimeout(function() {
-//             resolve(message)
-//         }, time);
-//     })
-//     .then((res)=> console.log(res))
-// };
+// http.createServer( function(request, response) {
+//     response.writeHead(200, {'Content-Type': 'text/html'});
+    
+//     response.write('<h1>System Information</h1><br>');
+//     response.write(`<p>Current user name: ${os.userInfo().username}</p>`);
+//     response.write(`<p>OS type: ${os.platform()}</p>`);
+//     response.write(`<p>System work time: ${(os.uptime()/60).toFixed(2)} minutes</p>`);
+//     response.write(`<p>Current work directory: ${path.dirname(__filename)}</p>`);
+//     response.write(`<p>Server file name: ${path.basename(__filename)}</p>`);
+    
+//     response.end();
+//  }).listen(5000);
+//  console.log('Server running at http://127.0.0.1:5000/');
 
-// getPromise("test promise", 2000)
 
-// #2
+ // #2
 
-// function calcArrProduct(array) {
-//     const promise = new Promise(function (resolve, reject){
-//         if (!array.some(isNaN)){
-//             const sum = array.reduce((a, b) => a * b, 1)
-//             resolve(sum)
-//         } else {
-//             reject("Error! Incorrect array!")
-//         }
-//     })
-//     .then((res)=> console.log(res))
-//     .catch((error) => console.log(error))
-// };
+const http = require('http');
+const os = require('node:os');
+const userGreeting = require('./personalmodule');
 
-// calcArrProduct([3,4,5])
-// calcArrProduct ( [5,"user2", 7, 12])
+http.createServer( function(request, response) {
+    response.writeHead(200, {'Content-Type': 'text/html'});
+    
+    response.write(`<p>Date of request : ${(new Date()).toString()}</p>`);
+    response.write(`<p>${userGreeting(os.userInfo().username)}</p>`);
 
-// #3
-
-// function delay(i, time) {
-//     return new Promise((resolve) => {
-//         setTimeout(() => resolve(i), time)
-//     });
-// }
-
-// function showNumbers(){
-//     for (let i = 0; i < 10; i++) {
-//         let promise = Promise.resolve()
-//         let timeout = Math.random() * 1000;
-//         promise.then(() => delay(i, timeout)).then(console.log);
-//     };
-// }
-
-// showNumbers();
+    response.end();
+ }).listen(8000);
