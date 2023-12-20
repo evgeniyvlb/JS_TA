@@ -1,34 +1,58 @@
 // #1
-// const http = require('http');
-// const os = require('node:os');
-// const path = require('path');
 
-// http.createServer( function(request, response) {
-//     response.writeHead(200, {'Content-Type': 'text/html'});
-    
-//     response.write('<h1>System Information</h1><br>');
-//     response.write(`<p>Current user name: ${os.userInfo().username}</p>`);
-//     response.write(`<p>OS type: ${os.platform()}</p>`);
-//     response.write(`<p>System work time: ${(os.uptime()/60).toFixed(2)} minutes</p>`);
-//     response.write(`<p>Current work directory: ${path.dirname(__filename)}</p>`);
-//     response.write(`<p>Server file name: ${path.basename(__filename)}</p>`);
-    
-//     response.end();
-//  }).listen(5000);
-//  console.log('Server running at http://127.0.0.1:5000/');
+// function upperCase(str){
+//     if (str.charAt(0).toUpperCase() == str.charAt(0)){
+//         console.log("String's not starts with uppercase character")
+//     } else {
+//         console.log("String ' s starts with uppercase character")
+//     };
+// }
+// upperCase('regexp');
+// upperCase('RegExp');
 
+// #2
 
- // #2
+// function checkEmail(str){
+//     let regExp = /\S+@\S+\.\S+\s?/;
+//     console.log(regExp.test(str))
+// }
+// checkEmail ("Qmail2@gmail.com "); true
 
-const http = require('http');
-const os = require('node:os');
-const userGreeting = require('./personalmodule');
+// #3
 
-http.createServer( function(request, response) {
-    response.writeHead(200, {'Content-Type': 'text/html'});
-    
-    response.write(`<p>Date of request : ${(new Date()).toString()}</p>`);
-    response.write(`<p>${userGreeting(os.userInfo().username)}</p>`);
+// let regExp = /d(b+)(d?)/ig;
+// console.log(regExp.exec("cdbBdbsbz"))
 
-    response.end();
- }).listen(8000);
+// #4
+
+// string = " Java Script "
+// let res = string.replace(/(\w+) (\w+)/g, "$2 , $1");
+// console.log(res)
+
+// #5
+
+// function checkCard(card){
+//     let regExp = /\d{4}-\d{4}-\d{4}-\d{4}/;
+//     if (regExp.test(card)){
+//         console.log("correct")     
+//     } else {
+//         console.log("incorrect")   
+//     }
+// }
+// checkCard( '9999-9999-9999-9999' )
+
+// #6
+
+// function checkEmail (str){
+//     let regExp = /^[a-zA-Z0-9][a-zA-Z0-9_]+\-?[a-zA-Z0-9]+@\S+\.\S+/;
+//     regExp.test(str)
+//     if (regExp.test(str)){
+//         console.log('Email is correct!')
+//     } else {
+//         console.log('Email is not correct!')
+//     }
+// }
+
+// checkEmail('my_mail@gmail.com');
+// checkEmail('#my_mail@gmail.com');
+// checkEmail('my_ma--il@gmail.com');
